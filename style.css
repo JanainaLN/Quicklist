@@ -24,7 +24,9 @@
     body {
         font-size: 1.6rem;
         background: var(--background-primary);
+        padding-inline: 3.2rem;
     }
+    
    
     header{
         display: flex;
@@ -37,5 +39,97 @@
         font-size: 2.4rem;
         color: var(--content-primary);
         margin-bottom: 4.4rem;
+    }
+
+    input, button{
+        padding: 1.2rem 1.8;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 1.2rem;
+        font-size: 1.6rem;
+    }
+
+    input{
+        margin-bottom: 1.6rem;
+        border: 2px solid var(--border-primary);
+        color: var(--content-primary);
+    }
+
+    input:focus{
+        border-color: var(--color-brand);
+    }
+
+    input::placeholder{
+        color: var(--content-tertiary);
+    }
+
+    button {
+        background: var(--color-brand);
+        font-weight: 600;
+        color: var(--always-white);
+    }
+
+    button:hover {
+        background: var(--color-brand-hover);
+        transition: background .4s;
+    }
+   
+}
+.itens{
+    margin-top: 4rem;
+
+    .item{
+        background: var(--always-white);
+        margin-bottom: 1.2rem;
+        border-radius: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.2rem;
+        align-items: center;
+
+        line-height: 2.4rem;
+        font-weight: 500;
+        box-shadow: 0 2 px 6px rgba(8, 11, 18, 0.2);
+
+        button{
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            img{
+                opacity: 0.7;
+                width: 1.6rem;
+            }
+        }
+
+        .checkbox-customizado{
+            border: 1px solid var(--border-primary);
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 0.6rem;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        div:has(input:checked){
+            .checkbox-customizado{
+                background: var(--color-brand);
+                border-color: var(--color-brand);
+                transition: 0.2s;
+            }
+
+            label{
+                text-decoration: line-through;
+            }
+        }
+
+        input{
+            display: none;
+        }
     }
 }
